@@ -1,10 +1,5 @@
 # EL_ZONE_SLOG3_FALSE_COLOR
-# Input expected: Sony S-Log3 (normalized 0..1)
-# offset_ev = 0.0
-# make_plus6_white = False
 LUT_3D_SIZE 33
-DOMAIN_MIN 0.0 0.0 0.0
-DOMAIN_MAX 1.0 1.0 1.0
 0.000000 0.000000 0.000000
 0.000000 0.000000 0.000000
 0.000000 0.000000 0.000000

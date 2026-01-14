@@ -166,12 +166,7 @@ def write_cube_3d(
 
     with out_path.open("w", encoding="utf-8") as f:
         f.write(f"# {title}\n")
-        f.write("# Input expected: Sony S-Log3 (normalized 0..1)\n")
-        f.write(f"# offset_ev = {offset_ev}\n")
-        f.write(f"# make_plus6_white = {make_plus6_white}\n")
         f.write(f"LUT_3D_SIZE {size}\n")
-        f.write("DOMAIN_MIN 0.0 0.0 0.0\n")
-        f.write("DOMAIN_MAX 1.0 1.0 1.0\n")
 
         for r_i in range(size):
             r = r_i / (size - 1)
