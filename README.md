@@ -22,7 +22,7 @@ The LUTs are intended for **exposure analysis only**, not for creative grading.
 ### `GenerateLut.py`
 
 The Python script:
-- Implements exact Sony S-Log3 math
+- Implements exact Sony S-Log3 math as documented in [Sony’s technical whitepapers](https://pro.sony/s3/cms-static-content/uploadfile/06/1237494271406.pdf).
 - Generates both LUT variants
 - Allows modification of:
   - LUT resolution (e.g. 33³, 65³)
@@ -33,3 +33,15 @@ The Python script:
 
 The EL Zone colors were sampled from a reference EL Zone chart and interpreted in sRGB.
 There is no official EL Zone RGB specification; the palette is illustrative and intended for clarity rather than colorimetry.
+
+![picture](Images/ColorPalette.jpeg)
+
+## Acknowledgements
+
+- **EL Zone System**  
+  The EL Zone exposure system was developed by **Ed Lachman, ASC**.  
+  This project is an independent technical implementation and is not affiliated with the original creator.
+
+- **Inspiration**  
+  This repository is heavily inspired by the work by [ShinKanji on NikonZR-ELZONE-LUT](https://github.com/ShinKanji/NikonZR-ELZONE-LUT)
+
