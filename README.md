@@ -15,11 +15,21 @@ The LUTs are intended for **exposure analysis only**, not for creative grading.
 > 标准 EL Zone 伪色 LUT，0EV 对应 18% 灰，用于常规 S-Log3 曝光判断。
 
 ### 2. `EL_ZONE_SLOG3_false_color_offset_plus_1p7.cube`
-- Exposure thresholds shifted by **+1.7 EV**
-- EV labels remain unchanged; only the stop boundaries move
-- **+6 EV and above are rendered as pure white**
-- Useful for ETTR-style exposure and highlight protection checks
-> 曝光阈值整体右移 +1.7EV，适合向右曝光监看，+6EV 以上直接显示为纯白。
+**Status:** *Not recommended for practical exposure monitoring*
+
+**状态**：*不建议实战使用*
+
+This LUT applies a global EV offset to the EL Zone mapping, effectively remapping higher exposure levels into lower EV color zones.  
+As a result, regions that are already close to or entering overexposure may no longer be clearly indicated by the EL Zone clipping warning colors (e.g. pink/white), which can obscure real highlight clipping and reduce the reliability of exposure judgement.
+For practical use, EL Zone should be treated as a **fixed reference system**. ETTR is better achieved by using the **0EV LUT** and pushing exposure toward the highlight limit without clipping, rather than by shifting the EL Zone reference itself.
+
+This LUT is retained for **technical comparison and analysis only**, and is **not recommended** for on-set or real-world exposure monitoring.
+
+> 该版本通过整体 EV 偏移改变了 EL Zone 的参考系，本质上会将高曝光区域重新映射到较低的伪色区间，导致真实过曝区域在伪色中不再被清晰标记，从而降低曝光判断的可靠性。  
+> 在实际拍摄中，更合理的做法是将 EL Zone 作为**固定参考系**使用，通过 0EV 版本在不裁切高光的前提下向右曝光，而不是整体平移伪色区间。因此该 LUT 仅保留作为技术对照与分析用途，不建议实战使用。
+
+
+
 
 ## Source Code
 
