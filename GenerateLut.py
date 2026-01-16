@@ -48,7 +48,6 @@ TOE_CODE_CUTOFF = 171.2102946929  # code at reflection = 0.01125
 def slog3_norm_to_reflection(slog3_norm: float) -> float:
     """
     S-Log3 normalized (0..1) -> Scene Linear Reflection
-    Follows your screenshot exactly.
     """
     if slog3_norm >= (TOE_CODE_CUTOFF / 1023.0):
         # out = (10^((in*1023 - 420)/261.5))*(0.18+0.01) - 0.01
