@@ -1,4 +1,4 @@
-# SonySlog3-ELZONE-FalseColor-LUT
+# Sony-Slog3-ELZONE-FalseColor-LUT
 
 This repository contains **[EL Zone–style](https://www.elzonesystem.com/) false color LUTs for Sony S-Log3**, together with the **Python source code used to generate them**.  
 The LUTs are intended for **exposure analysis only**, not for creative grading.
